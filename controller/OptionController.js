@@ -10,8 +10,7 @@ module.exports.create = (req, res) => {
         console.log("Successfully Created Option!!");
 
          option.link_to_vote = `http://127.0.0.1:8000/${option._id}/add_vote`;
-        //option.link_to_vote = `https://polling-system-api-x3h9.onrender.com/api/v1/options/${option._id}/add_vote`;
-        option.save();
+          option.save();
 
         Questions.findById(questionId)
           .then((question) => {
